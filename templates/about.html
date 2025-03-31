@@ -1,0 +1,179 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Singh Diaries, our mission, values, and the people behind our platform.">
+  <meta name="keywords" content="Singh Diaries, storytelling, community, about us">
+  <meta name="author" content="Singh Diaries">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'assets/css/fontawesome.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/templatemo-stand-blog.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/owl.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+<!-- Include Font Awesome from CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>About Us | Singh Diaries</title>
+
+  <style>
+    .heading-page {
+      background: url('{% static "about-us.jpeg" %}') no-repeat center center/cover;
+      position: relative;
+      padding: 100px 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    .heading-page::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .text-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 1s ease-in-out;
+      padding-top: 120px; 
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-section, .team-section {
+      padding: 60px 0;
+      text-align: center;
+      
+    }
+
+    .about-section h1, .about-section h2, .team-section h2 {
+      color: #333;
+      font-weight: 700;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about-values {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-values li {
+      font-size: 1.1rem;
+      margin: 10px 0;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .about-values li:hover {
+      color: #007bff;
+      transform: scale(1.05);
+    }
+
+    .team-member {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+    }
+
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .contact-section {
+      padding: 40px 0;
+      background: #f8f9fa;
+      text-align: center;
+    }
+
+    .contact-section a {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- Hero Section -->
+  <div class="heading-page">
+    <div class="container">
+      <div class="text-content">
+        <h4>About Us</h4>
+        <h2>Connecting People Through Stories</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <h1>About Singh Diaries</h1>
+      <p>Singh Diaries is a storytelling platform dedicated to inspiring, educating, and connecting individuals through powerful narratives.</p>
+
+      <h2>Our Mission</h2>
+      <p>We believe in the transformative power of stories to bridge gaps, create conversations, and build meaningful relationships.</p>
+
+      <h2>Our Values</h2>
+      <ul class="about-values">
+        <li><strong>Integrity:</strong> We uphold honesty and authenticity in everything we do.</li>
+        <li><strong>Community:</strong> We strive to create a sense of belonging and support.</li>
+        <li><strong>Creativity:</strong> We encourage innovative and impactful storytelling.</li>
+        <li><strong>Inclusivity:</strong> We celebrate diverse voices and perspectives.</li>
+      </ul>
+    </div>
+  </section>
+
+  
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Get Involved</h2>
+      <p>Have a story to share or an idea to contribute? We’d love to hear from you.</p>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+</html>
