@@ -6,7 +6,7 @@
 A Blog application in Django contains all the features of a Blog site like login/register into the system, add blog post with title, description and image and edit or delete the blog post.
 
 
-  <a href="/"><strong>➥ Live Demo</strong></a>
+  <a href="python-personal-blog-singh-diaries.vercel.app/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
