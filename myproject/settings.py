@@ -24,7 +24,7 @@ MEDIA_DIR = os.path.join(BASE_DIR,"media")
 SECRET_KEY = "django-insecure-s0eg9q5^i%wy4n5m78yvbpwkb3j3u)w8nx=pr&c6+ag8ltvs5t"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app']
 
@@ -112,7 +112,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [STATIC_DIR]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  
+]
+
+# Ensure STATIC_ROOT is set if using `collectstatic`
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 MEDIA_URL = "media/"
 MEDIA_ROOT = MEDIA_DIR
 # Default primary key field type
