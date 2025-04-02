@@ -23,7 +23,7 @@ SECRET_KEY = "django-insecure-s0eg9q5^i%wy4n5m78yvbpwkb3j3u)w8nx=pr&c6+ag8ltvs5t
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
 
-ALLOWED_HOSTS = ['your-app-name.onrender.com',"127.0.0.1"]
+ALLOWED_HOSTS = ['personal-blog-singhdiaries.onrender.com',"127.0.0.1"]
 
 
 # Application definition
