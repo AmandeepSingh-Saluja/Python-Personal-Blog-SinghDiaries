@@ -509,7 +509,7 @@ body.popup .submit-row {
 .related-lookup {
     width: 16px;
     height: 16px;
-    background-image: url(../img/search.svg);
+    background-image: url(../media/images/search.svg);
 }
 
 form .related-widget-wrapper ul {
