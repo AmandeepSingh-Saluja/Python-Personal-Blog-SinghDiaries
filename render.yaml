@@ -1,5 +1,0 @@
-services:
-  - type: web
-    name: blog-singhdiaries
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn myproject.wsgi:application"
