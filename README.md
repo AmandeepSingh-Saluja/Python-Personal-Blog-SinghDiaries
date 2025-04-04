@@ -19,6 +19,7 @@ Creating A Blog In Django has interactive UI design using which users can see wh
 
 <br>
 <br>
+![1]((https://github.com/user-attachments/assets/aa143797-385d-4d7c-b7ae-3be0144f954f)
 ![Image](https://github.com/user-attachments/assets/aa143797-385d-4d7c-b7ae-3be0144f954f)
 ![Image](https://github.com/user-attachments/assets/89e1d278-563d-46bf-b407-27984ec6aa2c)
 ![Image](https://github.com/user-attachments/assets/5fbd494f-bdca-43e9-ba56-46aa2285c548)
