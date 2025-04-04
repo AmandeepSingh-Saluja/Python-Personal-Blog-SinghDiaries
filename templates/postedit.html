@@ -72,47 +72,139 @@
 <body>
 
   <!-- Header -->
-  <header class="">
-    <nav class="navbar navbar-expand-lg bg-white">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <h2><span style="color: rgb(255, 255, 255);">Singh</span><span style="color: rgb(241, 110, 70);">Diaries</span></h2>
+        <!-- Brand Logo with Icon -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'index' %}">
+          <img src="/media/images/singhdiaries_logo.jpeg" alt="Singh Diaries Logo" class="brand-icon">
+          <h2 class="mb-0 fw-bold">
+            <span class="text-white">Singh</span>
+            <span class="text-danger">Diaries</span>
+          </h2>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+  
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li>
-              <a class="nav-link" href="{% url 'index' %}">Home
-                <span class="sr-only">(current)</span>
+  
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+          <ul class="navbar-nav d-flex align-items-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" 
+                 href="{% url 'index' %}">
+                <i class="fa fa-home"></i> Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'blog' %}active{% endif %}" 
+                 href="{% url 'blog' %}">
+                <i class="fa fa-book"></i> Blogs
+              </a>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" 
+                 href="{% url 'contact' %}">
+                <i class="fa fa-envelope"></i> Contact
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'About' %}active{% endif %}" 
+                 href="{% url 'about' %}">
+                <i class="fa fa-info-circle"></i> About
+              </a>
+            </li>
+  
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'create' %}">Create</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'create' %}active{% endif %}" 
+                 href="{% url 'create' %}">
+                <i class="fa fa-plus-circle"></i> Create
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'profile' user.id %}">Profile</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}" 
+                 href="{% url 'profile' user.id %}">
+                <i class="fa fa-user"></i> Profile
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              <a class="nav-link text-danger fw-bold" href="{% url 'logout' %}">
+                <i class="fa fa-sign-out-alt"></i> Logout
+              </a>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'signin' %}">Login</a>
+              <a class="nav-link btn btn-danger text-white px-3 py-2 rounded" href="{% url 'signin' %}">
+                <i class="fa fa-user"></i> Login
+              </a>
             </li>
             {% endif %}
           </ul>
         </div>
       </div>
     </nav>
+    <style>
+      .navbar {
+        background-color: #2C3E50 !important; /* Dark Navy Blue */
+      }
+    
+      .navbar .nav-link {
+        color: white !important;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+      }
+    
+      .navbar .nav-link:hover, .navbar .nav-link.active {
+        color: #E74C3C !important; /* Red Highlight */
+      }
+    
+      .navbar-brand h2 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    
+      .brand-icon {
+        height: 40px;
+        width: auto;
+      }
+    
+      .navbar-toggler {
+        border: none;
+        outline: none;
+      }
+    
+      .navbar .btn {
+        background-color: #E74C3C !important;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease-in-out;
+      }
+    
+      .navbar .btn:hover {
+        background-color: #C0392B !important; /* Darker Red */
+      }
+      .text-white,.text-danger{
+        text-transform: uppercase;
+      }
+    
+      /* Responsive Fix */
+      @media (max-width: 991px) {
+        .navbar-nav {
+          text-align: center;
+        }
+        .navbar-brand {
+          margin-bottom: 10px;
+        
+        }
+      }
+    </style>
+    
   </header>
+  
 
   <!-- Page Content -->
 
