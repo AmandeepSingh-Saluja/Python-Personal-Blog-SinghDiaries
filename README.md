@@ -17,15 +17,18 @@ A Blog application in Django contains all the features of a Blog site like login
 
 Creating A Blog In Django has interactive UI design using which users can see what others are posting. It also has an admin panel through which all the blog posts and users can be managed.
 
-<br>
-<br>
+# Project Screenshots
 
-![1](PREVIEW/IMG1.png)
-![2](PREVIEW/IMG2.png)
-![3](PREVIEW/IMG3.png)
-![4](PREVIEW/IMG4.png)
-![5](PREVIEW/IMG5.png)
-<br>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/aa143797-385d-4d7c-b7ae-3be0144f954f" alt="Screenshot 1"><br><br>
+  <img src="https://github.com/user-attachments/assets/89e1d278-563d-46bf-b407-27984ec6aa2c" alt="Screenshot 2"><br><br>
+  <img src="https://github.com/user-attachments/assets/5fbd494f-bdca-43e9-ba56-46aa2285c548" alt="Screenshot 3"><br><br>
+  <img src="https://github.com/user-attachments/assets/3179bd7b-bff9-42c3-aae6-532f30dbc1a8" alt="Screenshot 4"><br><br>
+  <img src="https://github.com/user-attachments/assets/af269236-5036-4e7c-883d-dfa885f22d77" alt="Screenshot 5"><br><br>
+  <img src="https://github.com/user-attachments/assets/5243e775-f7c5-42b1-a781-8b1dcf7465b5" alt="Screenshot 6"><br><br>
+  <img src="https://github.com/user-attachments/assets/10de1af9-8361-40e8-99eb-01f5ec0c3b63" alt="Screenshot 7">
+</p>
+
 
 
 ## Features 
