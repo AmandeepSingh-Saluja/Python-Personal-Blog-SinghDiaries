@@ -11,19 +11,26 @@
   <meta name="keywords" content="Singh Diaries, storytelling, community, about us">
   <meta name="author" content="Singh Diaries">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{% static '/assets/css/fontawesome.css' %}" rel="stylesheet">
-  <link href="{% static '/assets/css/templatemo-stand-blog.css' %}" rel="stylesheet">
-  <link href="{% static '/assets/css/owl.css' %}" rel="stylesheet">
-  <link href="{% static '/assets/css/styles.css' %}" rel="stylesheet">
-<!-- Include Font Awesome from CDN -->
+ <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome from CDN (latest version) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Local static CSS files -->
+<link href="{% static 'assets/css/fontawesome.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/templatemo-stand-blog.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/owl.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+
   <title>About Us | Singh Diaries</title>
 
   <style>
     .heading-page {
-      background: url('{% static "about-us.jpeg" %}') no-repeat center center/cover;
+      background: url('{% static "about-us.jpg" %}') no-repeat center center/cover;
       position: relative;
       padding: 100px 0;
       text-align: center;
@@ -169,11 +176,14 @@
   {% include 'footer.html' %}
 
   <!-- JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
-  <script src="{% static '/assets/js/custom.js' %}"></script>
+
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+<!-- Bootstrap Bundle (includes Popper) – use only one source -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your custom script -->
+<script src="{% static 'assets/js/custom.js' %}"></script>
 
 </body>
 </html>
