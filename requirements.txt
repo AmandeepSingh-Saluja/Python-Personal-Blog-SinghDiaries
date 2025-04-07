@@ -13,3 +13,4 @@ pyinstaller
 PyMySQL
 pyparsing
 virtualenv
+whitenoise
